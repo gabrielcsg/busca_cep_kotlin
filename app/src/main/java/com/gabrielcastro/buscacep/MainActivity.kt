@@ -49,11 +49,19 @@ class MainActivity : AppCompatActivity() {
         viewModel.myResponse.observe(this, { response ->
             tvLoading.visibility = View.INVISIBLE
             if (response.isSuccessful) {
-                Toast.makeText(
-                    applicationContext,
-                    "${response.body()?.street}",
-                    Toast.LENGTH_SHORT
-                ).show()
+                if (response.body()?.error == true) {
+                    Toast.makeText(
+                        applicationContext,
+                        getString(R.string.error_invalid_cep),
+                        Toast.LENGTH_SHORT
+                    ).show()
+                } else {
+                    Toast.makeText(
+                        applicationContext,
+                        response.body()?.street,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
             } else Toast.makeText(applicationContext, "Error", Toast.LENGTH_SHORT).show()
         })
     }

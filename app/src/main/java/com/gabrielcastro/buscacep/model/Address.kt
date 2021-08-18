@@ -13,5 +13,7 @@ data class Address (
     @SerializedName("localidade")
     val city: String,
     @SerializedName("uf")
-    val state: String
+    val state: String,
+    @SerializedName("erro")
+    val error: Boolean
 )
