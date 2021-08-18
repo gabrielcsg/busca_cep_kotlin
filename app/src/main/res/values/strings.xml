@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">BuscaCep</string>
+    <string name="input_cep">Informe o CEP</string>
+    <string name="btn_search">Buscar</string>
+    <string name="loading">Carregando…</string>
+    <string name="error_empty">Informe o CEP</string>
+    <string name="error_length">O CEP deve conter 8 dígitos</string>
 </resources>
