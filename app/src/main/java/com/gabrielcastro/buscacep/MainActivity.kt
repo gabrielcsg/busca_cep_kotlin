@@ -56,13 +56,18 @@ class MainActivity : AppCompatActivity() {
                         Toast.LENGTH_SHORT
                     ).show()
                 } else {
-                    Toast.makeText(
-                        applicationContext,
-                        response.body()?.street,
-                        Toast.LENGTH_SHORT
-                    ).show()
+                    findViewById<TextView>(R.id.id_tv_street).text = response.body()?.street!!
+                    findViewById<TextView>(R.id.id_tv_neighborhood).text = response.body()?.neighborhood!!
+                    findViewById<TextView>(R.id.id_tv_city).text = response.body()?.city!!
+                    findViewById<TextView>(R.id.id_tv_state).text = response.body()?.state!!
+                    return@observe
                 }
             } else Toast.makeText(applicationContext, "Error", Toast.LENGTH_SHORT).show()
+
+            findViewById<TextView>(R.id.id_tv_street).text = ""
+            findViewById<TextView>(R.id.id_tv_neighborhood).text = ""
+            findViewById<TextView>(R.id.id_tv_city).text = ""
+            findViewById<TextView>(R.id.id_tv_state).text = ""
         })
     }
 }
