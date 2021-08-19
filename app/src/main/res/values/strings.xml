@@ -6,4 +6,9 @@
     <string name="error_empty">Informe o CEP</string>
     <string name="error_length">O CEP deve conter 8 dígitos</string>
     <string name="error_invalid_cep">Não encontramos dados para o CEP</string>
+    <string name="street">"Rua: "</string>
+    <string name="neighborhood">"Bairro: "</string>
+    <string name="city">"Cidade: "</string>
+    <string name="state">"Estado: "</string>
+    <string name="open_map">Abrir mapa</string>
 </resources>
